@@ -7,7 +7,7 @@ class Product {
     public static $productCategoryName = ['Cibo Umido', 'Cibo Secco', 'Giochi', 'Cucce'];
     protected string $imageUrl;
     protected string $description;
-    protected float $price;
+    protected  $price;
     protected int $quantity;
 
     public function __construct($_productName, $_brand, Category $_categoryName, $_price, $_quantity) {
