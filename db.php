@@ -10,13 +10,13 @@ require_once './models/toy.php';
 
 $dog = new Category();
 
-var_dump($dog);
+//var_dump($dog);
 
 $cat = new Category();
 $cat->setName('Gatto');
 $cat->setIconUrl('./img/cat.png');
 
-var_dump($cat);
+//var_dump($cat);
 
 $miniAdult = new Food("Mini Adult", "Royal Canin", $dog, 15.00, 5, 'carni e derivati, cereali, oli e grassi, sottoprodotti di origine vegetale, sali minerali, zuccheri.', );
 $miniAdult->productCategory = Product::$productCategoryName[0];
@@ -24,7 +24,7 @@ $miniAdult->setFormat("12 Bustine da 85gr");
 $miniAdult->setDescription('Alimento completo per cani adulti di piccola taglia (tra 1 e 10 kg) - Da 10 mesi a 12 anni di età.');
 $miniAdult->setImageUrl('./img/royalmini.jpg');
 
-var_dump($miniAdult);
+//var_dump($miniAdult);
 
 $dogBed = new Bed('Dreamaway Boston Petit Sofà', 'Fabotex', $dog, 63.99, 2, 'blu', '65x50x20 cm');
 $dogBed->setImageUrl('./img/cucciacane.png');
@@ -38,8 +38,8 @@ $catBed->productCategory = Product::$productCategoryName[3];
 $catBed->setDescription('Morbida cuccetta a forma di piramide con cuscino estraibile. Realizzata con tessuto in cotone piu\' resistente.');
 
 
-var_dump($dogBed);
-var_dump($catBed);
+//var_dump($dogBed);
+//var_dump($catBed);
 
 $dogToy = new Toy('Cotonosso Centro Palla', 'Petup', $dog, 4.49, 8);
 $dogToy->setColor('Verde/Blu');
@@ -49,7 +49,7 @@ $dogToy->setImageUrl('./img/giococane.jpg');
 $dogToy->setDescription('Gioco robusto e resistente. Fara\' la felicita\' del tuo cane che potrà divertirsi con questo passatempo in cotone intrecciato.');
 $dogToy->productCategory = Product::$productCategoryName[2];
 
-var_dump($dogToy);
+//var_dump($dogToy);
 
 
 

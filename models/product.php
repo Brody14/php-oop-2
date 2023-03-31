@@ -29,10 +29,6 @@ class Product {
         $this->brand = trim($newValue);
     }
 
-    public function setCategoryName($newValue) {
-        $this->categoryName = trim($newValue);
-    }
-
     public function setDescription($newValue) { 
         $this->description = trim($newValue);
     }
@@ -64,10 +60,6 @@ class Product {
         return $this->productName;
     }
 
-    public function getCategoryName() {
-        return $this->categoryName;
-    }
-
     public function getDescription() { 
         return $this->description ;
     }
@@ -82,6 +74,10 @@ class Product {
 
     public function getImageUrl() {
         return $this->imageUrl;
+    }
+
+    public function getBrand() {
+        return $this->brand;
     }
 
 }
