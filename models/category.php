@@ -1,21 +1,19 @@
 <?php
 
 class Category {
-    protected string $name;
-    protected string $iconUrl;
-
-    public function __construct($_name) {
-        $this->name = $_name;   
-    }
+    protected string $name = "Cane";
+    protected string $iconUrl = './img/dog.png';
 
     //SETTER E GETTER
 
     public function setName($newValue) {
-        $this->name = $newValue;
+        if($newValue == "Gatto") 
+            $this->name = $newValue;
+        
     }
 
     public function setIconUrl($newValue) {
-        $this->iconUrl = $newValue;
+            $this->iconUrl = $newValue;
     }
 
     public function getName() {
@@ -25,4 +23,5 @@ class Category {
     public function getIconUrl() {
         return $this->iconUrl;
     }
+
 }
