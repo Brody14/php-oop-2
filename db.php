@@ -4,12 +4,11 @@ require_once './models/category.php';
 require_once './models/product.php';
 require_once './models/food.php';
 require_once './models/bed.php';
-
+require_once './models/toy.php';
 
 //CREO LE CATEGORIE
 
 $dog = new Category();
-
 
 var_dump($dog);
 
@@ -41,6 +40,16 @@ $catBed->setDescription('Morbida cuccetta a forma di piramide con cuscino estrai
 
 var_dump($dogBed);
 var_dump($catBed);
+
+$dogToy = new Toy('Cotonosso Centro Palla', 'Petup', $dog, 4.49, 8);
+$dogToy->setColor('Verde/Blu');
+$dogToy->setWeight('115 gr');
+$dogToy->setSize('38 cm');
+$dogToy->setImageUrl('./img/giococane.jpg');
+$dogToy->setDescription('Gioco robusto e resistente. Fara\' la felicita\' del tuo cane che potrà divertirsi con questo passatempo in cotone intrecciato.');
+$dogToy->productCategory = Product::$productCategoryName[2];
+
+var_dump($dogToy);
 
 
 
