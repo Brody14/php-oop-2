@@ -24,15 +24,58 @@ require_once './db.php';
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 mb-3 mb-sm-0">
-                    <div class="card">
-                        <img class="m-auto" style="height:200px; width:160px" src="<?= $miniAdult->GetImageUrl(); ?>"/>
+                <div class="col">
+                    <div class="card p-2" style="height:500px">
+                        <img class="m-auto" style="height:200px; width:200px" src="<?= $miniAdult->GetImageUrl(); ?>"/>
                         <div class="card-body">
-                            <img style="height:30px" src="<?= $dog->GetIconUrl(); ?>"/>
-                            <h6> <?= $dog->getName() . '/' . ' ' . $miniAdult->productCategory?> </h6>
+                            <div class="d-flex mb-3 align-items-center">
+                                <img class="me-2" style="height:30px" src="<?= $dog->GetIconUrl(); ?>"/>
+                                <h6 class="m-0"> <?= $dog->getName() . '/' . ' ' . $miniAdult->productCategory?> </h6>
+                            </div>
                             <h5 class="card-title"><?= $miniAdult->getBrand() . ' ' . $miniAdult->getProductName(); ?></h5>
                             <p class="card-text"><?= $miniAdult->getDescription(); ?></p>
-                            <p><?= $miniAdult->getPrice() . '€';?></p>
+                            <ul class="p-0 list-unstyled">
+                                <li>Prezzo: <strong><?= $miniAdult->getPrice() . '€';?></strong></li>
+                                <li><?= $miniAdult->getIngredient();?></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card  p-2" style="height:500px">
+                        <img class="m-auto" style="height:200px; width:200px" src="<?= $dogToy->GetImageUrl(); ?>"/>
+                        <div class="card-body">
+                            <div class="d-flex mb-3  align-items-center">
+                                <img class="me-2" style="height:30px" src="<?= $dog->GetIconUrl(); ?>"/>
+                                <h6 class="m-0"> <?= $dog->getName() . '/' . ' ' . $dogToy->productCategory?> </h6>
+                            </div>
+                            <h5 class="card-title"><?= $dogToy->getBrand() . ' ' . $dogToy->getProductName(); ?></h5>
+                            <p class="card-text"><?= $dogToy->getDescription(); ?></p>
+                            <ul class="p-0 list-unstyled">
+                                <li>Prezzo: <strong><?= $dogToy->getPrice() . '€';?></strong></li>
+                                <li>Colore: <?= $dogToy->getColor();?></li>
+                                <li>Dimensione: <?= $dogToy->getSize();?></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card  p-2" style="height:500px">
+                        <img class="m-auto" style="height:200px; width:200px" src="<?= $catBed->GetImageUrl(); ?>"/>
+                        <div class="card-body">
+                            <div class="d-flex mb-3 align-items-center">
+                                <img class="me-2" style="height:30px" src="<?= $cat->GetIconUrl(); ?>"/>
+                                <h6 class="m-0"> <?= $cat->getName() . '/' . ' ' . $catBed->productCategory?> </h6>
+                            </div>
+                            <h5 class="card-title"><?= $catBed->getBrand() . ' ' . $catBed->getProductName(); ?></h5>
+                            <p class="card-text"><?= $catBed->getDescription(); ?></p>
+                            <ul class="p-0 list-unstyled">
+                                <li>Prezzo: <strong><?= $catBed->getPrice() . '€';?></strong></li>
+                                <li>Colore: <?= $catBed->getColor();?></li>
+                                <li>Dimensione: <?= $catBed->getSize();?></li>
+                            </ul>
                         </div>
                     </div>
                 </div>

@@ -27,13 +27,13 @@ $miniAdult->setImageUrl('./img/royalmini.jpg');
 //var_dump($miniAdult);
 
 $dogBed = new Bed('Dreamaway Boston Petit Sofà', 'Fabotex', $dog, 63.99, 2, 'blu', '65x50x20 cm');
-$dogBed->setImageUrl('./img/cucciacane.png');
+$dogBed->setImageUrl('./img/cucciacane.jpg');
 $dogBed->productCategory = Product::$productCategoryName[3];
 $dogBed->setDescription('Dreamaway Boston Sofà in tessuto poliestere 100% idrorepellente, antigraffio, alta resistenza, completamente sfoderabile con zip, per uso “in & outdoor” con imbottitura 100% poliuretano espanso macinato');
 
 
 $catBed = new Bed('Cuccia Igloo Plus', 'Petup', $cat, 38.20, 6, 'blu', '40x40 cm');
-$catBed->setImageUrl('./img/cucciagatto.png');
+$catBed->setImageUrl('./img/cucciagatto.jpg');
 $catBed->productCategory = Product::$productCategoryName[3];
 $catBed->setDescription('Morbida cuccetta a forma di piramide con cuscino estraibile. Realizzata con tessuto in cotone piu\' resistente.');
 
