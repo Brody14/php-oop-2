@@ -11,7 +11,7 @@ class Food extends Product {
 
     public function __construct($_productName, $_brand, Category $_category, $_price, $_quantity, $_ingredients) {
         parent::__construct($_productName, $_brand, $_category, $_price, $_quantity);
-        $this->ingredients = $_ingredients;
+        $this->setIngredients($_ingredients);
     }
 
     public function setIngredients($newValue) {

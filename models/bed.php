@@ -11,8 +11,8 @@ class Bed extends Product {
 
     public function __construct($_productName, $_brand, Category $_category, $_price, $_quantity, $_color, $_size) {
         parent::__construct($_productName, $_brand, $_category, $_price, $_quantity);
-        $this->color = $_color;
-        $this->size = $_size;
+        $this->setColor($_color);
+        $this->setSize($_size);
 
     }
 

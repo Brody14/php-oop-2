@@ -7,17 +7,16 @@ class Product {
     public static $productCategoryName = ['Cibo Umido', 'Cibo Secco', 'Giochi', 'Cucce'];
     protected string $imageUrl;
     protected string $description;
-    protected  $price;
+    protected string $price;
     protected int $quantity;
 
     public function __construct($_productName, $_brand, Category $_category, $_price, $_quantity) {
-        $this->productName = $_productName;
-        $this->brand = $_brand;
+        $this->setProductName($_productName);
+        $this->setBrand($_brand);
         $this->category = $_category;
-        $this->price = $_price;
-        $this->quantity = $_quantity;
+        $this->setPrice($_price);
+        $this->setQuantity($_quantity);
     }
-
 
     //SETTER E GETTER
 
@@ -30,6 +29,10 @@ class Product {
     }
 
     public function setDescription($newValue) { 
+        if(strlen($newValue) < 10) {
+            throw new Exception("Descrizione Troppo Lunga");
+        }
+
         $this->description = trim($newValue);
     }
 
@@ -42,8 +45,8 @@ class Product {
 
 
     public function setPrice($newValue) {
-        if($newValue < 0 || $newValue === null) {
-            return;
+        if($newValue < 0) {
+            throw new Exception("Il prezzo inserito non è valido");
         }
         $this->price = $newValue;
     }
