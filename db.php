@@ -1,7 +1,6 @@
 <?php
 
 require_once './models/category.php';
-require_once './models/product.php';
 require_once './models/food.php';
 require_once './models/bed.php';
 require_once './models/toy.php';
@@ -22,7 +21,7 @@ $cat->setIconUrl('./img/cat.png');
 
 //CIBO
 
-$miniAdult = new Food("Mini Adult", "Royal Canin", $dog, 15.00, 5, 'carni e derivati, cereali, oli e grassi, sottoprodotti di origine vegetale, sali minerali, zuccheri.' );
+$miniAdult = new Food("Mini Adult", "Royal Canin", $dog, number_format(15.00, 2), 5, 'carni e derivati, cereali, oli e grassi, sottoprodotti di origine vegetale, sali minerali, zuccheri.' );
 $miniAdult->productCategory = Product::$productCategoryName[0];
 $miniAdult->setFormat("12 Bustine da 85gr");
 $miniAdult->setDescription('Alimento completo per cani adulti di piccola taglia (tra 1 e 10 kg) - Da 10 mesi a 12 anni di età.');
@@ -47,7 +46,7 @@ $dogBed->productCategory = Product::$productCategoryName[3];
 $dogBed->setDescription('Dreamaway Boston Sofà in tessuto poliestere 100% idrorepellente, antigraffio, alta resistenza, completamente sfoderabile con zip, per uso “in & outdoor” con imbottitura 100% poliuretano espanso macinato');
 
 
-$catBed = new Bed('Cuccia Igloo Plus', 'Petup', $cat, 38.20, 6, 'blu', '40x40 cm');
+$catBed = new Bed('Cuccia Igloo Plus', 'Petup', $cat, number_format(38.20, 2), 6, 'blu', '40x40 cm');
 $catBed->setImageUrl('./img/cucciagatto.jpg');
 $catBed->productCategory = Product::$productCategoryName[3];
 $catBed->setDescription('Morbida cuccetta a forma di piramide con cuscino estraibile. Realizzata con tessuto in cotone piu\' resistente.');

@@ -43,9 +43,9 @@ class Product {
 
     public function setPrice($newValue) {
         if($newValue < 0 || $newValue === null) {
-            $newValue = 10;
+            return;
         }
-        $this->price = number_format($newValue, 2);
+        $this->price = $newValue;
     }
 
     public function setQuantity($newValue) {
