@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/models/product.php';
+require_once __DIR__ . '/../models/product.php';
 require_once __DIR__ . '/../traits/ProductCategory.php';
 
 class Food extends Product {
