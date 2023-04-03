@@ -13,7 +13,7 @@ class Category {
     }
 
     public function setIconUrl($newValue) {
-            $this->iconUrl = $newValue;
+        $this->iconUrl = $newValue;
     }
 
     public function getName() {

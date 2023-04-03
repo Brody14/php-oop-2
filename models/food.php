@@ -1,10 +1,12 @@
 <?php
 
-require_once './models/product.php';
+require_once __DIR__ . '/models/product.php';
+require_once __DIR__ . '/../traits/ProductCategory.php';
 
 class Food extends Product {
+    use ProductCategory;
+
     protected string $ingredients;
-    public string $productCategory;
     protected string $format;
 
     public function __construct($_productName, $_brand, Category $_category, $_price, $_quantity, $_ingredients) {
@@ -54,4 +56,7 @@ class Food extends Product {
         </div>
         <?php
     }
+
+ 
+    
 }

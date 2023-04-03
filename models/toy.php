@@ -1,31 +1,18 @@
 <?php
 
-require_once './models/product.php';
+require_once __DIR__ . '/models/product.php';
+require_once __DIR__ . '/../traits/ProductCategory.php';
+require_once __DIR__ . '/../traits/Color.php';
+require_once __DIR__ . '/../traits/Size.php';
+
 
 class Toy extends Product {
-    protected string $color;
-    public string $productCategory;
-    protected string $size;
+    use ProductCategory, Color, Size;
+
     protected string $weight;
 
     public function __construct($_productName, $_brand, Category $_category, $_price, $_quantity) {
         parent::__construct($_productName, $_brand, $_category, $_price, $_quantity);
-    }
-
-    public function setColor($newValue) {
-        $this->color = $newValue;
-    }
-
-    public function getColor() {
-        return $this->color;
-    }
-
-    public function setSize($newValue) {
-        $this->size = $newValue;
-    }
-
-    public function getSize() {
-        return $this->size;
     }
 
     public function setWeight($newValue) {
