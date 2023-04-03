@@ -3,17 +3,17 @@
 class Product {
     protected string $productName;
     protected string $brand;
-    protected Category $categoryName;
+    protected Category $category;
     public static $productCategoryName = ['Cibo Umido', 'Cibo Secco', 'Giochi', 'Cucce'];
     protected string $imageUrl;
     protected string $description;
     protected  $price;
     protected int $quantity;
 
-    public function __construct($_productName, $_brand, Category $_categoryName, $_price, $_quantity) {
+    public function __construct($_productName, $_brand, Category $_category, $_price, $_quantity) {
         $this->productName = $_productName;
         $this->brand = $_brand;
-        $this->categoryName = $_categoryName;
+        $this->category = $_category;
         $this->price = $_price;
         $this->quantity = $_quantity;
     }
@@ -45,7 +45,7 @@ class Product {
         if($newValue < 0 || $newValue === null) {
             $newValue = 10;
         }
-        $this->price = trim($newValue);
+        $this->price = number_format($newValue, 2);
     }
 
     public function setQuantity($newValue) {
@@ -78,6 +78,10 @@ class Product {
 
     public function getBrand() {
         return $this->brand;
+    }
+
+    public function getCategory() {
+        return $this->category;
     }
 
 }
